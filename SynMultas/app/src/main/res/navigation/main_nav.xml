@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/myFinesFragment">
+
+    <fragment
+        android:id="@+id/myFinesFragment"
+        android:name="co.edu.unal.synmultas.ui.fragment.MyFinesFragment"
+        android:label="fragment_my_fines"
+        tools:layout="@layout/fragment_my_fines" />
+    <fragment
+        android:id="@+id/chatBotFragment"
+        android:name="co.edu.unal.synmultas.ui.fragment.ChatBotFragment"
+        android:label="fragment_chat_bot"
+        tools:layout="@layout/fragment_chat_bot" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="co.edu.unal.synmultas.ui.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
