@@ -8,8 +8,9 @@ import co.edu.unal.synmultas2.mainModule.model.MainInteractor
 import java.util.concurrent.LinkedBlockingQueue
 
 class MainViewModel: ViewModel() {
-    private var fineList: MutableList<FineEntity> = mutableListOf()
-    private var interactor: MainInteractor = MainInteractor()
+    private var mFineList: MutableList<FineEntity> = mutableListOf()
+    private var mInteractor: MainInteractor = MainInteractor()
+    private lateinit var mPlate:String
 
     private val fines: MutableLiveData<List<FineEntity>> by lazy {
         MutableLiveData<List<FineEntity>>().also {
@@ -17,14 +18,18 @@ class MainViewModel: ViewModel() {
         }
     }
 
+    fun setPlate(plate: String){
+        this.mPlate=plate
+    }
+
     fun getFines(): LiveData<List<FineEntity>>{
         return fines.also { loadFines() }
     }
 
     private fun loadFines(){
-        interactor.getFinesByPlate {
+        mInteractor.getFinesByPlate(mPlate) {
             fines.value = it
-            fineList = it
+            mFineList = it
         }
     }
 }

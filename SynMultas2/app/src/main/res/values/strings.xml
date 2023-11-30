@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SynMultas2</string>
+    <string name="description_chat_button">chat button</string>
+    <string name="hint_start_plate">Ingrese la placa de su vehículo</string>
+    <string name="btn_consultar">Consultar</string>
+    <string name="invalid_plate">Placa inválida</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chat_bot_title">Chat bot</string>
 </resources>

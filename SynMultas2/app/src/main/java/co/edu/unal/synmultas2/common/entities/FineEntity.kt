@@ -1,11 +1,11 @@
 package co.edu.unal.synmultas2.common.entities
 
 data class FineEntity(
-    val validity: String,
-    val licencePlate: String,
-    val fineDate: String,
-    val fineValue: Long,
-    val department: String,
-    val city: String,
-    val isPaid: String
+    val vigencia: String,
+    val placa: String,
+    val fecha_multa: String,
+    val valor_multa: String,
+    val departamento: String,
+    val ciudad: String,
+    val pagado_si_no: String
 )
